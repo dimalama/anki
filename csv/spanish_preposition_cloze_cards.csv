@@ -1,0 +1,41 @@
+Text,Translation,Explanation
+Este regalo es {{c1::para}} ti.,This gift is for you.,'Para' is used to indicate the recipient of something.
+Gracias {{c1::por}} tu ayuda.,Thanks for your help.,'Por' is used to express gratitude or cause.
+Voy {{c1::a}} la playa.,I am going to the beach.,'A' indicates movement or direction.
+Estoy {{c1::en}} casa.,I am at home.,'En' is used to express location.
+Salí {{c1::de}} la oficina.,I left the office.,'De' is used to show origin or separation.
+Llegó {{c1::con}} su amigo.,He/She arrived with his/her friend.,'Con' shows accompaniment.
+Trabajo {{c1::para}} ganar dinero.,I work to earn money.,'Para' is used to express purpose or goal.
+Caminamos {{c1::por}} el parque.,We walked through the park.,'Por' indicates movement through a space.
+El libro fue escrito {{c1::por}} Gabriel García Márquez.,The book was written by Gabriel García Márquez.,'Por' shows the agent in passive voice.
+Estudio español {{c1::desde}} las ocho.,I’ve been studying Spanish since eight o'clock.,'Desde' indicates the starting point in time.
+El gato está {{c1::debajo de}} la mesa.,The cat is under the table.,'Debajo de' expresses position beneath something.
+Hay un libro {{c1::entre}} los cuadernos.,There is a book between the notebooks.,'Entre' indicates something in between.
+La tienda está {{c1::al lado de}} la farmacia.,The store is next to the pharmacy.,'Al lado de' shows proximity or next to.
+El cuaderno está {{c1::encima de}} la silla.,The notebook is on top of the chair.,'Encima de' shows location above or on top.
+Las llaves están {{c1::dentro de}} la bolsa.,The keys are inside the bag.,'Dentro de' indicates something inside.
+El coche está {{c1::enfrente de}} la casa.,The car is in front of the house.,'Enfrente de' shows something is directly in front of.
+El baño está {{c1::a la derecha de}} la cocina.,The bathroom is to the right of the kitchen.,'A la derecha de' indicates right side.
+El comedor está {{c1::a la izquierda de}} la sala.,The dining room is to the left of the living room.,'A la izquierda de' indicates left side.
+El perro duerme {{c1::detrás de}} la puerta.,The dog sleeps behind the door.,'Detrás de' indicates position behind something.
+La mochila está {{c1::delante de}} la silla.,The backpack is in front of the chair.,'Delante de' indicates something in front of.
+Vengo {{c1::desde}} Madrid.,I come from Madrid.,'Desde' indicates the point of origin.
+"Durante el verano, hace calor.",It is hot during the summer.,'Durante' indicates time span. No cloze used because it's obvious.
+Camina {{c1::hacia}} la estación.,Walk toward the station.,'Hacia' indicates direction or goal.
+Estaré aquí {{c1::hasta}} las ocho.,I will be here until eight o'clock.,'Hasta' indicates limit in time or space.
+El cuadro está {{c1::sobre}} la chimenea.,The painting is above the fireplace.,'Sobre' can mean above or about.
+Fue {{c1::tras}} ella sin dudar.,He went after her without hesitation.,'Tras' indicates following or pursuit.
+No salí {{c1::porque}} estaba cansado.,I didn't go out because I was tired.,'Porque' gives a reason or cause.
+Salió {{c1::sin}} paraguas.,He went out without an umbrella.,'Sin' indicates absence.
+Vino {{c1::con}} su hermana.,He came with his sister.,'Con' shows accompaniment.
+Discutieron {{c1::sobre}} política.,They argued about politics.,'Sobre' here means about (a topic).
+Estudié {{c1::por}} tres horas.,I studied for three hours.,'Por' expresses duration of time.
+Te cambio mi sándwich {{c1::por}} tu ensalada.,I'll trade you my sandwich for your salad.,'Por' is used to express exchange.
+Gracias {{c1::por}} el regalo.,Thanks for the gift.,'Por' expresses gratitude or reason.
+Este libro fue escrito {{c1::por}} un famoso autor.,This book was written by a famous author.,'Por' identifies the agent in passive constructions.
+Salimos {{c1::para}} la playa a las ocho.,We’re leaving for the beach at eight.,'Para' expresses destination.
+Este informe es {{c1::para}} mañana.,This report is for tomorrow.,'Para' expresses a deadline.
+Estudio {{c1::para}} aprender español.,I study to learn Spanish.,'Para' expresses purpose or goal.
+Este regalo es {{c1::para}} ti.,This gift is for you.,'Para' shows intended recipient.
+Trabajo {{c1::para}} una empresa internacional.,I work for an international company.,'Para' indicates employer or beneficiary.
+Corrí {{c1::por}} el parque esta mañana.,I ran through the park this morning.,'Por' expresses movement through space.

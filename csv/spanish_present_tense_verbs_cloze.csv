@@ -1,0 +1,17 @@
+Text,Translation,Explanation
+Yo {{c1::hablo}} español todos los días.,I speak Spanish every day.,'Hablar' in present tense with 'yo' is 'hablo'.
+Tú {{c1::comes}} muy rápido.,You eat very quickly.,'Comer' in present tense with 'tú' is 'comes'.
+Él {{c1::vive}} en Madrid.,He lives in Madrid.,'Vivir' in present tense with 'él' is 'vive'.
+Nosotros {{c1::trabajamos}} en una empresa grande.,We work at a big company.,'Trabajar' in present tense with 'nosotros' is 'trabajamos'.
+Vosotros {{c1::leéis}} muchos libros.,You all read a lot of books.,'Leer' in present tense with 'vosotros' is 'leéis'. (Used in Spain)
+Ellas {{c1::escriben}} cartas a sus amigos.,They (feminine) write letters to their friends.,'Escribir' in present tense with 'ellas' is 'escriben'.
+Ustedes {{c1::abren}} la tienda a las nueve.,You all open the store at nine.,'Abrir' in present tense with 'ustedes' is 'abren'.
+Yo {{c1::tomo}} café por la mañana.,I drink coffee in the morning.,'Tomar' in present tense with 'yo' is 'tomo'.
+Tú {{c1::escribes}} muy bien.,You write very well.,'Escribir' in present tense with 'tú' is 'escribes'.
+Nosotros {{c1::leemos}} el periódico.,We read the newspaper.,'Leer' in present tense with 'nosotros' is 'leemos'.
+"Los verbos que terminan en -ar como 'hablar': Yo {{c1::hablo}}, Tú {{c2::hablas}}, Él {{c3::habla}}.","Verbs ending in -ar like 'hablar': I speak, You speak, He speaks.","Regular -ar verbs have the pattern: -o, -as, -a."
+"Los verbos que terminan en -er como 'comer': Yo {{c1::como}}, Tú {{c2::comes}}, Él {{c3::come}}.","Verbs ending in -er like 'comer': I eat, You eat, He eats.","Regular -er verbs have the pattern: -o, -es, -e."
+"Los verbos que terminan en -ir como 'vivir': Yo {{c1::vivo}}, Tú {{c2::vives}}, Él {{c3::vive}}.","Verbs ending in -ir like 'vivir': I live, You live, He lives.","Regular -ir verbs have the pattern: -o, -es, -e."
+"Nosotros {{c1::hablamos}}, Vosotros {{c2::habláis}}, Ellos {{c3::hablan}} — del verbo 'hablar'.","We speak, You all speak, They speak — from the verb 'hablar'.",'Hablar' (to speak) follows the -ar pattern for plural forms.
+"Nosotros {{c1::comemos}}, Vosotros {{c2::coméis}}, Ellos {{c3::comen}} — del verbo 'comer'.","We eat, You all eat, They eat — from the verb 'comer'.",'Comer' (to eat) follows the -er pattern for plural forms.
+"Nosotros {{c1::vivimos}}, Vosotros {{c2::vivís}}, Ellos {{c3::viven}} — del verbo 'vivir'.","We live, You all live, They live — from the verb 'vivir'.",'Vivir' (to live) follows the -ir pattern for plural forms.

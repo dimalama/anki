@@ -1,0 +1,11 @@
+Text,Translation,Explanation
+Yo {{c1::voy}} al gimnasio cada día. (verbo: ir),I go to the gym every day.,"'Ir' is highly irregular: yo voy, tú vas, él va..."
+Tú {{c1::eres}} muy amable. (verbo: ser),You are very kind.,"'Ser' is irregular: tú eres, él es, nosotros somos..."
+Ella {{c1::está}} cansada. (verbo: estar),She is tired.,"'Estar' is irregular: yo estoy, tú estás, él está..."
+Nosotros {{c1::tenemos}} mucha suerte. (verbo: tener),We are very lucky.,"'Tener' is irregular: yo tengo, tú tienes, él tiene..."
+Yo {{c1::hago}} mi tarea ahora. (verbo: hacer),I’m doing my homework now.,'Hacer' changes in the 'yo' form to 'hago'.
+Tú {{c1::dices}} la verdad. (verbo: decir),You tell the truth.,"'Decir' is irregular: yo digo, tú dices..."
+Él {{c1::puede}} correr muy rápido. (verbo: poder),He can run very fast.,'Poder' is a stem-changing verb: o → ue (puede).
+Yo {{c1::veo}} la televisión por la noche. (verbo: ver),I watch TV at night.,'Ver' changes in the 'yo' form to 'veo'.
+Nosotros {{c1::queremos}} más información. (verbo: querer),We want more information.,'Querer' is a stem-changing verb: e → ie (quiero).
+Ustedes {{c1::vienen}} de la oficina. (verbo: venir),You all come from the office.,"'Venir' is irregular: yo vengo, tú vienes, él viene..."
