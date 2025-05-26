@@ -1,0 +1,25 @@
+Concept,Spanish Example,English Translation,Explanation
+Singular Masculine,un coche pequeño,a small car,Masculine adjective ends in -o.
+Singular Feminine,una casa pequeña,a small house,Feminine adjective ends in -a.
+Plural Masculine,unos chicos altos,some tall boys,Masculine plural ends in -os.
+Plural Feminine,unas chicas altas,some tall girls,Feminine plural ends in -as.
+Singular Neutral,un chico inteligente,an intelligent boy,Adjective ending in -e doesn’t change with gender.
+Plural Neutral,unos pantalones verdes,some green pants,-e adjectives form plural with -es.
+Singular Consonant,un chico joven,a young boy,Consonant adjectives stay the same in singular.
+Plural Consonant,unos calcetines azules,some blue socks,Add -es for plural.
+Masculine Singular,un chico encantador,a charming boy,Masculine ends in -or.
+Feminine Singular,una chica encantadora,a charming girl,Feminine adds -a to -or.
+Masculine Plural,unos hombres charlatanes,some talkative men,Irregular plural ends in -es.
+Feminine Plural,unas mujeres charlatanas,some talkative women,Keep gender-specific form + plural -as.
+Irregular,feliz → felices,happy → happy (plural),z changes to c in plural.
+Irregular,joven → jóvenes,young → young (plural),Accent is added in plural form.
+Irregular,marrón → marrones,brown → brown (plural),Add -es to form plural.
+Rule,Adjetivo = mismo género y número que el sustantivo,Adjective must match gender and number of noun,Agreement in Spanish is required.
+Rule,nombre masculino + nombre femenino = adjetivo plural masculino,male name + female name = masculine plural adjective,Plural adjective takes masculine form if mixed gender.
+Ejemplo,Susana y Elena son muy trabajadoras.,Susana and Elena are very hardworking.,Plural feminine adjective.
+Ejemplo,Antonio y Marta son altos y morenos.,Antonio and Marta are tall and dark-haired.,Mixed gender uses masculine plural.
+Ejemplo,Roberto es simpático.,Roberto is nice.,Ser + adjective structure.
+Ejemplo,Juan está muy delgado.,Juan is very thin.,Estar + adjective structure.
+Ejemplo,María tiene los ojos azules.,Maria has blue eyes.,Noun + adjective structure.
+Ejemplo,Julio es un buen escritor.,Julio is a good writer.,Buen/buena placed before noun.
+Ejemplo,Tengo una mala noticia.,I have bad news.,Adjective comes before noun for emphasis.

@@ -59,5 +59,206 @@
             "reversed"
         ],
         "timestamp": "2025-05-25T20:14:46.734594"
+    },
+    {
+        "csv_file": "spanish_past_tense_irregular_verbs_with_examples.csv",
+        "output_file": "spanish_past_tense_irregular_verbs_with_examples.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "past",
+            "tense",
+            "irregular",
+            "verbs",
+            "with",
+            "examples",
+            "verb"
+        ],
+        "timestamp": "2025-05-26T14:05:07.643396"
+    },
+    {
+        "csv_file": "spanish_future_simple_deck.csv",
+        "output_file": "spanish_future_simple_deck.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "future",
+            "simple",
+            "ir-a",
+            "translation",
+            "person"
+        ],
+        "timestamp": "2025-05-26T14:14:46.349435"
+    },
+    {
+        "csv_file": "spanish_simple_future_irregular_verbs.csv",
+        "output_file": "spanish_simple_future_irregular_verbs.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "simple",
+            "future",
+            "irregular",
+            "verbs",
+            "verb",
+            "ir-a"
+        ],
+        "timestamp": "2025-05-26T14:20:38.679964"
+    },
+    {
+        "csv_file": "preterito_perfecto_deck.csv",
+        "output_file": "preterito_perfecto_deck.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "preterito",
+            "perfecto",
+            "person"
+        ],
+        "timestamp": "2025-05-26T14:52:02.460091"
+    },
+    {
+        "csv_file": "preterito_imperfecto_deck.csv",
+        "output_file": "preterito_imperfecto_deck.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "preterito",
+            "imperfecto",
+            "past",
+            "person"
+        ],
+        "timestamp": "2025-05-26T15:04:32.812753"
+    },
+    {
+        "csv_file": "preterito_imperfecto_irregular_deck.csv",
+        "output_file": "preterito_imperfecto_irregular_deck.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "preterito",
+            "imperfecto",
+            "irregular",
+            "past",
+            "person"
+        ],
+        "timestamp": "2025-05-26T15:07:10.138696"
+    },
+    {
+        "csv_file": "spanish_vocab_deck_from_images.csv",
+        "output_file": "spanish_vocab_deck_from_images.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "vocab",
+            "from",
+            "images",
+            "vocabulary",
+            "translation",
+            "reversed"
+        ],
+        "timestamp": "2025-05-26T15:17:00.953758"
+    },
+    {
+        "csv_file": "final_spanish_vocab_deck.csv",
+        "output_file": "final_spanish_vocab_deck.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "vocab",
+            "vocabulary",
+            "translation",
+            "reversed"
+        ],
+        "timestamp": "2025-05-26T15:25:09.894004"
+    },
+    {
+        "csv_file": "presente_vs_estar_gerundio_deck.csv",
+        "output_file": "presente_vs_estar_gerundio_deck.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "presente",
+            "vs",
+            "estar",
+            "gerundio",
+            "present"
+        ],
+        "timestamp": "2025-05-26T15:28:33.446485"
+    },
+    {
+        "csv_file": "ya_todavia_aun_deck.csv",
+        "output_file": "ya_todavia_aun_deck.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "ya",
+            "todavia",
+            "aun"
+        ],
+        "timestamp": "2025-05-26T15:31:12.835607"
+    },
+    {
+        "csv_file": "ser_estar_hay_tener_deck.csv",
+        "output_file": "ser_estar_hay_tener_deck.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "ser",
+            "estar",
+            "hay",
+            "tener"
+        ],
+        "timestamp": "2025-05-26T16:25:30.004992"
+    },
+    {
+        "csv_file": "tomar_verb_anki_deck.csv",
+        "output_file": "tomar_verb_anki_deck.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "tomar",
+            "verb"
+        ],
+        "timestamp": "2025-05-26T16:28:25.064068"
+    },
+    {
+        "csv_file": "reflexive_verbs_deck.csv",
+        "output_file": "reflexive_verbs_deck.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "reflexive",
+            "verbs",
+            "verb"
+        ],
+        "timestamp": "2025-05-26T16:32:00.861997"
+    },
+    {
+        "csv_file": "singular_plural_adjective_agreement_deck.csv",
+        "output_file": "singular_plural_adjective_agreement_deck.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "singular",
+            "plural",
+            "adjective",
+            "agreement"
+        ],
+        "timestamp": "2025-05-26T16:35:26.887467"
     }
 ]

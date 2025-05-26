@@ -94,7 +94,12 @@ class DeckGenerator:
             for field_name in [field['name'] for field in self.fields]:
                 if field_name in field_mapping:
                     csv_column = field_mapping[field_name]
-                    fields.append(row[csv_column])
+                    # Handle empty cells, NaN values, and convert all values to strings
+                    value = row[csv_column]
+                    if pd.isna(value):  # Check for NaN/None values
+                        fields.append('')  # Empty string for NaN values
+                    else:
+                        fields.append(str(value))  # Convert all values to strings
                 else:
                     fields.append('')  # Empty string for unmapped fields
             
