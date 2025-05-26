@@ -1,0 +1,5 @@
+{
+  "name": "Basic Card",
+  "qfmt": "{{Front}}",
+  "afmt": "{{FrontSide}}<hr><div class=\"back-content\"><b>{{Back}}</b></div>"
+}

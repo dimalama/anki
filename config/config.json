@@ -1,0 +1,66 @@
+{
+  "custom_tags": {
+    "*_verb_*.csv": ["verb", "grammar"],
+    "*_vocabulary_*.csv": ["vocabulary", "basic"],
+    "*_noun_*.csv": ["noun", "vocabulary"],
+    "*_adjective_*.csv": ["adjective", "vocabulary"],
+    "*_adverb_*.csv": ["adverb", "vocabulary"],
+    "*_preposition_*.csv": ["preposition", "grammar"],
+    "*_pronoun_*.csv": ["pronoun", "grammar"],
+    "*_conjunction_*.csv": ["conjunction", "grammar"],
+    "*_phrase_*.csv": ["phrase", "expression"],
+    "*_idiom_*.csv": ["idiom", "expression"],
+    "*_slang_*.csv": ["slang", "colloquial"],
+    "*_formal_*.csv": ["formal", "register"],
+    "*_informal_*.csv": ["informal", "colloquial"],
+    "*_beginner_*.csv": ["beginner", "level"],
+    "*_intermediate_*.csv": ["intermediate", "level"],
+    "*_advanced_*.csv": ["advanced", "level"]
+  },
+  "templates": {
+    "basic": {
+      "name": "Basic Card",
+      "qfmt": "{{Front}}",
+      "afmt": "{{FrontSide}}<hr><div class=\"back-content\"><b>{{Back}}</b></div>"
+    },
+    "cloze": {
+      "name": "Cloze Card",
+      "qfmt": "{{cloze:Text}}<br><div class=\"hint\">{{Hint}}</div>",
+      "afmt": "{{cloze:Text}}<hr><div class=\"translation\"><b>Translation:</b> {{Translation}}</div><div class=\"explanation\">{{Explanation}}</div>"
+    }
+  },
+  "css": ".card {\n  font-family: Arial, sans-serif;\n  font-size: 20px;\n  text-align: center;\n  color: #333;\n  background-color: #f9f9f9;\n  padding: 20px;\n}\n\n.back-content {\n  color: #27ae60;\n}\n\n.hint {\n  color: #95a5a6;\n  font-style: italic;\n}\n\n.translation {\n  color: #2980b9;\n}\n\n.explanation {\n  color: #7f8c8d;\n  font-style: italic;\n}\n\n.cloze {\n  font-weight: bold;\n  color: #e74c3c;\n}",
+  "media_enabled": true,
+  "media_dir": "media",
+  "create_reversed": false,
+  "language_tags": {
+    "spanish": ["es", "spanish", "español"],
+    "english": ["en", "english"],
+    "french": ["fr", "french", "français"],
+    "german": ["de", "german", "deutsch"],
+    "italian": ["it", "italian", "italiano"],
+    "portuguese": ["pt", "portuguese", "português"],
+    "russian": ["ru", "russian", "русский"],
+    "japanese": ["ja", "japanese", "日本語"],
+    "chinese": ["zh", "chinese", "中文"],
+    "korean": ["ko", "korean", "한국어"]
+  },
+  "grammar_tags": {
+    "verb": ["verb", "verbs", "verbo", "verbos"],
+    "noun": ["noun", "nouns", "sustantivo", "sustantivos"],
+    "adjective": ["adjective", "adjectives", "adjetivo", "adjetivos"],
+    "adverb": ["adverb", "adverbs", "adverbio", "adverbios"],
+    "preposition": ["preposition", "prepositions", "preposición", "preposiciones"],
+    "pronoun": ["pronoun", "pronouns", "pronombre", "pronombres"],
+    "conjunction": ["conjunction", "conjunctions", "conjunción", "conjunciones"]
+  },
+  "tense_tags": {
+    "present": ["present", "presente"],
+    "past": ["past", "pasado", "preterite", "preterito", "imperfect", "imperfecto"],
+    "future": ["future", "futuro"],
+    "conditional": ["conditional", "condicional"],
+    "imperative": ["imperative", "imperativo"],
+    "subjunctive": ["subjunctive", "subjuntivo"],
+    "perfect": ["perfect", "perfecto", "present perfect", "past perfect", "future perfect"]
+  }
+}

@@ -1,0 +1,104 @@
+/* Custom Anki Card Styling for Language Learning */
+
+/* General Card Styling */
+.card {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Front Side Styling */
+.front {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Back Side Content */
+.back-content {
+  margin-top: 15px;
+  font-size: 22px;
+  color: #27ae60;
+}
+
+/* Translation Section */
+.translation {
+  margin-top: 15px;
+  color: #2980b9;
+  font-size: 18px;
+}
+
+/* Explanation Section */
+.explanation {
+  margin-top: 10px;
+  font-style: italic;
+  color: #7f8c8d;
+  font-size: 16px;
+}
+
+/* Hint Styling */
+.hint {
+  color: #95a5a6;
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Cloze Deletion Styling */
+.cloze {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+/* Media Elements */
+img {
+  max-width: 100%;
+  max-height: 300px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+/* Audio Player */
+.replay-button {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px 10px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Language-specific styling */
+.spanish {
+  color: #c0392b;
+}
+
+.english {
+  color: #2980b9;
+}
+
+/* Night Mode Support */
+.nightMode .card {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+.nightMode .front {
+  color: #3498db;
+}
+
+.nightMode .back-content {
+  color: #2ecc71;
+}
+
+.nightMode .hint {
+  color: #bdc3c7;
+}

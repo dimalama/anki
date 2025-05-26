@@ -1,0 +1,33 @@
+[
+    {
+        "csv_file": "ir_a_infinitive_deck_basic.csv",
+        "output_file": "ir_a_infinitive_deck_basic.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "ir",
+            "infinitive",
+            "verb",
+            "ir-a",
+            "future"
+        ],
+        "timestamp": "2025-05-25T19:45:19.834738"
+    },
+    {
+        "csv_file": "ir_a_infinitive_deck_basic.csv",
+        "output_file": "ir_a_infinitive_deck_basic.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "ir",
+            "infinitive",
+            "verb",
+            "ir-a",
+            "future",
+            "reversed"
+        ],
+        "timestamp": "2025-05-25T19:53:00.687289"
+    }
+]

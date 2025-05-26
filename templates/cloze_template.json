@@ -1,0 +1,5 @@
+{
+  "name": "Cloze Card",
+  "qfmt": "{{cloze:Text}}<br><div class=\"hint\">{{Hint}}</div>",
+  "afmt": "{{cloze:Text}}<hr><div class=\"translation\"><b>Translation:</b> {{Translation}}</div><div class=\"explanation\">{{Explanation}}</div>"
+}
