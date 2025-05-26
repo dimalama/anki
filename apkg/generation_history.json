@@ -29,5 +29,35 @@
             "reversed"
         ],
         "timestamp": "2025-05-25T19:53:00.687289"
+    },
+    {
+        "csv_file": "preterite_indefinido_deck_basic.csv",
+        "output_file": "preterite_indefinido_deck_basic.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "preterite",
+            "indefinido",
+            "past",
+            "reversed"
+        ],
+        "timestamp": "2025-05-25T20:14:21.014476"
+    },
+    {
+        "csv_file": "preterite_indefinido_all_irregulars.csv",
+        "output_file": "preterite_indefinido_all_irregulars.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "preterite",
+            "indefinido",
+            "all",
+            "irregulars",
+            "past",
+            "reversed"
+        ],
+        "timestamp": "2025-05-25T20:14:46.734594"
     }
 ]
