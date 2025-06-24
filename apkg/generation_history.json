@@ -260,5 +260,84 @@
             "agreement"
         ],
         "timestamp": "2025-05-26T16:35:26.887467"
+    },
+    {
+        "csv_file": "spanish_anki_cards_with_hooks.csv",
+        "output_file": "spanish_anki_cards_with_hooks.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "with",
+            "hooks"
+        ],
+        "timestamp": "2025-06-23T22:15:38.975476"
+    },
+    {
+        "csv_file": "preterito_pluscuamperfecto_master_anki.csv",
+        "output_file": "preterito_pluscuamperfecto_master_anki.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "preterito",
+            "pluscuamperfecto",
+            "master"
+        ],
+        "timestamp": "2025-06-23T22:36:15.113443"
+    },
+    {
+        "csv_file": "condicional_simple_anki.csv",
+        "output_file": "condicional_simple_anki.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "condicional",
+            "simple"
+        ],
+        "timestamp": "2025-06-23T22:42:27.383071"
+    },
+    {
+        "csv_file": "futuro_vs_ir_a_cloze_anki.csv",
+        "output_file": "futuro_vs_ir_a_cloze_anki.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "futuro",
+            "vs",
+            "ir",
+            "cloze"
+        ],
+        "timestamp": "2025-06-23T22:49:49.634492"
+    },
+    {
+        "csv_file": "futuro_vs_ir_a_extended_anki.csv",
+        "output_file": "futuro_vs_ir_a_extended_anki.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "futuro",
+            "vs",
+            "ir",
+            "extended"
+        ],
+        "timestamp": "2025-06-23T22:50:54.126221"
+    },
+    {
+        "csv_file": "futuro_vs_ir_a_master_anki.csv",
+        "output_file": "futuro_vs_ir_a_master_anki.apkg",
+        "tags": [
+            "spanish",
+            "auto-generated",
+            "basic",
+            "futuro",
+            "vs",
+            "ir",
+            "master"
+        ],
+        "timestamp": "2025-06-23T22:53:55.894172"
     }
 ]
