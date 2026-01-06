@@ -25,12 +25,18 @@ git clone https://github.com/dimalama/anki.git
 cd anki
 ```
 
-2. Create a virtual environment and install dependencies:
+2. Install uv (if not already installed):
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+3. Create a virtual environment and install dependencies:
+
+```bash
+uv venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+uv pip install -r requirements.txt
 ```
 
 ## Usage
