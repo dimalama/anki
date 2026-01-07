@@ -37,7 +37,7 @@ export default function Dashboard() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `${deckId}.apkg`;
+      a.download = `${deckName}.apkg`;
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);

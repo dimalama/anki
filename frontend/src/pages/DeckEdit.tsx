@@ -41,7 +41,7 @@ export default function DeckEdit() {
   };
 
   const handleAddCard = () => {
-    const fields = deck?.card_type === 'cloze'
+    const fields: Record<string, string> = deck?.card_type === 'cloze'
       ? { Text: '', Translation: '', Explanation: '' }
       : { Front: '', Back: '' };
 

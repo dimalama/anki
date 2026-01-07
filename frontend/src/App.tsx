@@ -8,7 +8,7 @@ import './index.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/anki">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />

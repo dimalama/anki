@@ -1,0 +1,21 @@
+[Unit]
+Description=Anki Deck Generator Backend API
+After=network.target
+
+[Service]
+Type=simple
+User=dima
+Group=dima
+WorkingDirectory=/home/dima/Projects/anki/backend
+Environment="PATH=/home/dima/Projects/anki/backend/.venv/bin"
+ExecStart=/home/dima/Projects/anki/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8002
+Restart=always
+RestartSec=10
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=anki-backend
+
+[Install]
+WantedBy=multi-user.target

@@ -2,7 +2,6 @@
 
 import axios from 'axios';
 import type {
-  Deck,
   DeckCreate,
   DeckUpdate,
   DeckListResponse,
