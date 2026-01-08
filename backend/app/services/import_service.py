@@ -2,6 +2,7 @@
 
 import pandas as pd
 import io
+import re
 from typing import Optional, List
 from pathlib import Path
 
@@ -100,8 +101,9 @@ class ImportService:
                              for i in range(min(len(current_cols), len(expected_headers)))}
                 df = df.rename(columns=rename_map)
 
-        # Save CSV to csv directory
-        deck_id = deck_name.lower().replace(' ', '_')
+        # Save CSV to csv directory - sanitize deck_id for filesystem
+        deck_id = re.sub(r'[^\w\s-]', '', deck_name.lower())
+        deck_id = re.sub(r'[-\s]+', '_', deck_id)
         csv_path = self.deck_service._get_csv_path(deck_id)
 
         # Save the uploaded CSV
@@ -200,8 +202,9 @@ class ImportService:
         if not cards_data:
             raise ValueError("No valid card data found in text")
 
-        # Create deck
-        deck_id = deck_name.lower().replace(' ', '_')
+        # Create deck - sanitize deck_id for filesystem
+        deck_id = re.sub(r'[^\w\s-]', '', deck_name.lower())
+        deck_id = re.sub(r'[-\s]+', '_', deck_id)
         csv_path = self.deck_service._get_csv_path(deck_id)
 
         # Create CSV from data
