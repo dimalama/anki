@@ -4,11 +4,11 @@ After=network.target
 
 [Service]
 Type=simple
-User=YOUR_USERNAME
-Group=YOUR_USERNAME
-WorkingDirectory=/home/YOUR_USERNAME/Projects/anki/backend
-Environment="PATH=/home/YOUR_USERNAME/Projects/anki/backend/.venv/bin"
-ExecStart=/home/YOUR_USERNAME/Projects/anki/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8002
+User=dima
+Group=dima
+WorkingDirectory=/home/dima/Projects/anki/backend
+Environment="PATH=/home/dima/Projects/anki/backend/.venv/bin"
+ExecStart=/home/dima/Projects/anki/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8002
 Restart=always
 RestartSec=10
 

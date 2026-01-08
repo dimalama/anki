@@ -21,14 +21,14 @@ def show_tags(csv_path, language='spanish', config=None):
         # Load configuration if not provided
         if config is None:
             config = load_config()
-            
+
         # Create a deck generator for the CSV file
         generator = create_dynamic_deck_generator(csv_path, language, config)
-        
+
         # Print the tags
         print(f"\nTags for {os.path.basename(csv_path)}:")
         print(f"  {', '.join(generator.tags)}")
-        
+
         return True
     except Exception as e:
         print(f"Error analyzing tags: {e}")
@@ -42,16 +42,16 @@ def add_custom_tags(pattern, tags):
     try:
         # Load configuration
         config = load_config()
-        
+
         # Add or update custom tags
         if 'custom_tags' not in config:
             config['custom_tags'] = {}
-        
+
         config['custom_tags'][pattern] = tags
-        
+
         # Save configuration
         save_config(config)
-        
+
         print(f"Added custom tags {tags} for pattern '{pattern}'")
         return True
     except Exception as e:
@@ -64,27 +64,27 @@ def configure_templates(template_type, template_file):
     try:
         # Load configuration
         config = load_config()
-        
+
         # Load template from file
         with open(template_file, 'r') as f:
             template = json.load(f)
-        
+
         # Validate template
         required_keys = ['name', 'qfmt', 'afmt']
         for key in required_keys:
             if key not in template:
                 print(f"Error: Template is missing required key '{key}'")
                 return False
-        
+
         # Update configuration
         if 'templates' not in config:
             config['templates'] = {}
-        
+
         config['templates'][template_type] = template
-        
+
         # Save configuration
         save_config(config)
-        
+
         print(f"Updated {template_type} template from {template_file}")
         return True
     except Exception as e:
@@ -97,17 +97,17 @@ def configure_css(css_file):
     try:
         # Load configuration
         config = load_config()
-        
+
         # Load CSS from file
         with open(css_file, 'r') as f:
             css = f.read()
-        
+
         # Update configuration
         config['css'] = css
-        
+
         # Save configuration
         save_config(config)
-        
+
         print(f"Updated CSS from {css_file}")
         return True
     except Exception as e:
@@ -119,25 +119,25 @@ def show_history():
     """Show the history of generated decks."""
     try:
         history_file = os.path.join(OUTPUT_DIR, 'generation_history.json')
-        
+
         if not os.path.exists(history_file):
             print("No generation history found.")
             return False
-        
+
         with open(history_file, 'r') as f:
             history = json.load(f)
-        
+
         if not history:
             print("No generation history found.")
             return False
-        
+
         print(f"\nGeneration History ({len(history)} entries):")
         for i, entry in enumerate(history, 1):
             timestamp = datetime.fromisoformat(entry['timestamp']).strftime('%Y-%m-%d %H:%M:%S')
             print(f"\n{i}. {entry['csv_file']} → {entry['output_file']}")
             print(f"   Generated: {timestamp}")
             print(f"   Tags: {', '.join(entry['tags'])}")
-        
+
         return True
     except Exception as e:
         print(f"Error showing history: {e}")
@@ -145,10 +145,10 @@ def show_history():
 
 def main():
     parser = argparse.ArgumentParser(description='Auto-generate Anki decks from CSV files')
-    
+
     # Create subparsers for different commands
     subparsers = parser.add_subparsers(dest='command', help='Command to execute')
-    
+
     # Generate command
     generate_parser = subparsers.add_parser('generate', help='Generate Anki decks from CSV files')
     generate_parser.add_argument(
@@ -156,7 +156,7 @@ def main():
         default='spanish',
         choices=[
             'spanish', 'english', 'french', 'german', 'italian',
-            'portuguese', 'russian', 'japanese', 'chinese', 'korean', 'generic'
+            'portuguese', 'japanese', 'chinese', 'korean', 'generic'
         ],
         help='Language tag for the decks'
     )
@@ -175,13 +175,13 @@ def main():
         type=str,
         help='Name for the merged deck (required if --merge is specified)'
     )
-    
+
     generate_parser.add_argument(
         '--reversed',
         action='store_true',
         help='Create reversed cards (e.g., both English→Spanish and Spanish→English)'
     )
-    
+
     # Tags command
     tags_parser = subparsers.add_parser('tags', help='Manage tags for Anki decks')
     tags_parser.add_argument(
@@ -211,7 +211,7 @@ def main():
         default='spanish',
         help='Language tag for showing tags'
     )
-    
+
     # Template command
     template_parser = subparsers.add_parser('template', help='Configure card templates')
     template_parser.add_argument(
@@ -229,13 +229,13 @@ def main():
         type=str,
         help='CSS file containing the card styling'
     )
-    
+
     # History command
     history_parser = subparsers.add_parser('history', help='Show generation history')
-    
+
     # Parse arguments
     args = parser.parse_args()
-    
+
     # If no command specified, default to generate
     if not args.command:
         args.command = 'generate'
@@ -244,15 +244,15 @@ def main():
         args.merge = False
         args.merge_name = None
         args.reversed = False
-    
+
     # Handle commands
     if args.command == 'generate':
         print(f"🔍 Scanning for CSV files in {CSV_DIR}...")
-        
+
         # Load configuration and set reversed option
         config = load_config()
         config['create_reversed'] = args.reversed
-        
+
         # Generate decks
         generated_files = generate_decks_from_directory(
             csv_dir=CSV_DIR,
@@ -263,11 +263,11 @@ def main():
             merge_name=args.merge_name,
             custom_config=config
         )
-        
+
         # Print reversed cards message if enabled
         if args.reversed:
             print("\nCreated reversed cards (both directions) for all decks.")
-        
+
         # Print summary
         if generated_files:
             print(f"\n✅ Successfully generated {len(generated_files)} deck(s):")
@@ -275,7 +275,7 @@ def main():
                 print(f"  - {file}")
         else:
             print("❌ No decks were generated.")
-    
+
     elif args.command == 'tags':
         if args.show:
             # Show tags for specified files
@@ -290,7 +290,7 @@ def main():
             add_custom_tags(args.pattern, args.tags)
         else:
             tags_parser.print_help()
-    
+
     elif args.command == 'template':
         if args.type and args.file:
             # Configure template
@@ -300,7 +300,7 @@ def main():
             configure_css(args.css)
         else:
             template_parser.print_help()
-    
+
     elif args.command == 'history':
         # Show generation history
         show_history()

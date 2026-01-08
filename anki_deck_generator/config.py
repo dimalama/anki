@@ -30,7 +30,6 @@ SUPPORTED_LANGUAGES = [
     'german',
     'italian',
     'portuguese',
-    'russian',
     'japanese',
     'chinese',
     'korean',
@@ -94,16 +93,16 @@ def load_config() -> Dict[str, Any]:
         with open(DEFAULT_CONFIG_FILE, 'w') as f:
             json.dump(DEFAULT_CONFIG, f, indent=4)
         return DEFAULT_CONFIG
-    
+
     try:
         with open(DEFAULT_CONFIG_FILE, 'r') as f:
             config = json.load(f)
-        
+
         # Ensure all required keys are present
         for key, value in DEFAULT_CONFIG.items():
             if key not in config:
                 config[key] = value
-        
+
         return config
     except Exception as e:
         print(f"Error loading configuration: {e}")
@@ -125,10 +124,10 @@ def get_custom_tags(filename: str, config: Optional[Dict[str, Any]] = None) -> L
     """Get custom tags for a CSV file based on patterns in the configuration."""
     if config is None:
         config = load_config()
-    
+
     custom_tags = []
     for pattern, tags in config.get('custom_tags', {}).items():
         if pattern in filename:
             custom_tags.extend(tags)
-    
+
     return custom_tags

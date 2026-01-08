@@ -168,7 +168,6 @@ export default function Import() {
                   <option value="german">German</option>
                   <option value="italian">Italian</option>
                   <option value="portuguese">Portuguese</option>
-                  <option value="russian">Russian</option>
                   <option value="japanese">Japanese</option>
                   <option value="chinese">Chinese</option>
                   <option value="korean">Korean</option>
@@ -251,6 +250,11 @@ export default function Import() {
                   <option value="french">French</option>
                   <option value="german">German</option>
                   <option value="italian">Italian</option>
+                  <option value="portuguese">Portuguese</option>
+                  <option value="japanese">Japanese</option>
+                  <option value="chinese">Chinese</option>
+                  <option value="korean">Korean</option>
+                  <option value="generic">Other</option>
                 </select>
               </div>
             </div>
