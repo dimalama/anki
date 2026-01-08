@@ -108,12 +108,19 @@ export const templatesApi = {
 
 // Import API
 export const importApi = {
-  fromCSV: async (file: File, deckName?: string, language = 'spanish', cardType = 'basic'): Promise<DeckResponse> => {
+  fromCSV: async (
+    file: File,
+    deckName?: string,
+    language = 'spanish',
+    cardType = 'basic',
+    columnFormat?: string
+  ): Promise<DeckResponse> => {
     const formData = new FormData();
     formData.append('file', file);
     if (deckName) formData.append('deck_name', deckName);
     formData.append('language', language);
     formData.append('card_type', cardType);
+    if (columnFormat) formData.append('column_format', columnFormat);
 
     const response = await api.post('/import/csv', formData, {
       headers: {
@@ -128,7 +135,8 @@ export const importApi = {
     deckName: string,
     language = 'spanish',
     separator = '\t',
-    cardType = 'basic'
+    cardType = 'basic',
+    columnFormat?: string
   ): Promise<DeckResponse> => {
     const formData = new FormData();
     formData.append('text', text);
@@ -136,8 +144,13 @@ export const importApi = {
     formData.append('language', language);
     formData.append('separator', separator);
     formData.append('card_type', cardType);
+    if (columnFormat) formData.append('column_format', columnFormat);
 
-    const response = await api.post('/import/text', formData);
+    const response = await api.post('/import/text', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
     return response.data;
   },
 };

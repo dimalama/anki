@@ -10,8 +10,9 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
-NGINX_CONFIG="/etc/nginx/sites-available/optitrade"
-BACKUP_FILE="/etc/nginx/sites-available/optitrade.backup.$(date +%Y%m%d_%H%M%S)"
+# Configure your nginx site config file here
+NGINX_CONFIG="${NGINX_CONFIG:-/etc/nginx/sites-available/default}"
+BACKUP_FILE="${NGINX_CONFIG}.backup.$(date +%Y%m%d_%H%M%S)"
 
 echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}Nginx Configuration Update for Anki${NC}"
@@ -45,18 +46,21 @@ cp "$NGINX_CONFIG" "$BACKUP_FILE"
 TEMP_FILE=$(mktemp)
 
 # Read the original file and insert Anki configuration before the last closing brace
-awk '
+USER_HOME=$(eval echo ~$(whoami))
+APP_DIR="$USER_HOME/Projects/anki"
+
+awk -v app_dir="$APP_DIR" '
 /^}$/ && !inserted {
     print "    # Anki Deck Generator app - Proxy to backend on port 8002"
     print "    location /anki {"
     print "        # Serve frontend static files"
-    print "        alias /home/dima/Projects/anki/frontend/dist;"
+    print "        alias " app_dir "/frontend/dist;"
     print "        try_files $uri $uri/ /anki/index.html;"
     print "        index index.html;"
     print ""
     print "        # Cache static assets"
     print "        location ~* /anki/.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {"
-    print "            alias /home/dima/Projects/anki/frontend/dist;"
+    print "            alias " app_dir "/frontend/dist;"
     print "            expires 1y;"
     print "            add_header Cache-Control \"public, immutable\";"
     print "        }"
@@ -120,7 +124,7 @@ if nginx -t; then
     echo -e "${GREEN}Nginx configuration updated successfully!${NC}"
     echo -e "${GREEN}========================================${NC}\n"
     echo -e "Anki Deck Generator is now available at:"
-    echo -e "${YELLOW}http://192.168.0.174/anki${NC}\n"
+    echo -e "${YELLOW}http://YOUR_SERVER_IP/anki${NC}\n"
 else
     echo -e "${RED}ERROR:${NC} Nginx configuration test failed"
     echo -e "${YELLOW}Restoring backup...${NC}"

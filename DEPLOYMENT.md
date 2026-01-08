@@ -1,11 +1,11 @@
 # Anki Deck Generator - Server Deployment
 
-This application is now configured for deployment on your Xubuntu home server at `192.168.0.174`.
+This application is configured for deployment on a Linux server with nginx and systemd.
 
 ## Quick Start
 
 ```bash
-cd /home/dima/Projects/anki
+cd /path/to/anki
 ./deployment/deploy.sh
 ```
 
@@ -15,7 +15,7 @@ After the script completes, update nginx configuration:
 sudo ./deployment/update-nginx.sh
 ```
 
-Access the application at: **http://192.168.0.174/anki**
+Access the application at: **http://YOUR_SERVER_IP/anki**
 
 ## Documentation
 
@@ -31,11 +31,9 @@ The application runs alongside your existing applications:
 
 ```
 Nginx (Port 80)
-├── / → OptiTrade (port 8001)
-├── /ezhome → Ezhome (port 8000)
 └── /anki → Anki Deck Generator (port 8002)
      ├── Frontend: React SPA served by nginx
-     └── Backend: FastAPI on port 8002
+     └── Backend API: FastAPI on port 8002
 ```
 
 ## Key Files
@@ -66,7 +64,7 @@ sudo systemctl status anki-backend
 To update the application after code changes:
 
 ```bash
-cd /home/dima/Projects/anki
+cd /path/to/anki
 ./deployment/deploy.sh
 ```
 
@@ -74,13 +72,11 @@ cd /home/dima/Projects/anki
 
 | Application | Backend Port | Access URL |
 |-------------|--------------|------------|
-| OptiTrade | 8001 | http://192.168.0.174/ |
-| Ezhome | 8000 | http://192.168.0.174:8000/ |
-| **Anki** | **8002** | **http://192.168.0.174/anki** |
+| **Anki** | **8002** | **http://YOUR_SERVER_IP/anki** |
 
 ## Support
 
 For detailed troubleshooting and configuration options, see:
 - [deployment/README.md](deployment/README.md)
 - Backend logs: `sudo journalctl -u anki-backend -f`
-- Nginx logs: `sudo tail -f /var/log/nginx/optitrade.error.log`
+- Nginx logs: `sudo tail -f /var/log/nginx/error.log`

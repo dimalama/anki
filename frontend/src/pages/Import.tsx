@@ -12,8 +12,23 @@ export default function Import() {
   const [language, setLanguage] = useState('spanish');
   const [cardType, setCardType] = useState<'basic' | 'cloze'>('basic');
   const [separator, setSeparator] = useState('\t');
+  const [columnFormat, setColumnFormat] = useState<string>('auto');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Column format options with language-aware descriptions
+  const getColumnFormatOptions = () => {
+    const lang = language.charAt(0).toUpperCase() + language.slice(1);
+    return [
+      { value: 'auto', label: 'Auto-detect', desc: 'Automatically detect based on column count' },
+      { value: '2col', label: `2 columns`, desc: `English, ${lang}` },
+      { value: '3col', label: `3 columns`, desc: `English, ${lang}, Example` },
+      { value: '4col', label: `4 columns`, desc: `English, ${lang}, Example, Notes` },
+      { value: 'front_back', label: 'Front/Back', desc: 'Generic Front, Back' },
+      { value: 'cloze', label: 'Cloze (3 col)', desc: 'Text, Translation, Explanation' },
+      { value: 'cloze_notes', label: 'Cloze (4 col)', desc: 'Text, Translation, Explanation, Notes' },
+    ];
+  };
 
   const onDrop = async (acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
@@ -23,12 +38,20 @@ export default function Import() {
     setError(null);
 
     try {
-      const response = await importApi.fromCSV(file, deckName || undefined, language, cardType);
+      const format = columnFormat === 'auto' ? undefined : columnFormat;
+      const response = await importApi.fromCSV(file, deckName || undefined, language, cardType, format);
       if (response.success && response.deck) {
         navigate(`/decks/${response.deck.id}/edit`);
       }
     } catch (err: any) {
-      setError(err.response?.data?.detail || 'Failed to import CSV');
+      const detail = err.response?.data?.detail;
+      if (typeof detail === 'string') {
+        setError(detail);
+      } else if (Array.isArray(detail)) {
+        setError(detail.map((e: any) => e.msg || String(e)).join('; '));
+      } else {
+        setError('Failed to import CSV');
+      }
     } finally {
       setLoading(false);
     }
@@ -52,12 +75,20 @@ export default function Import() {
     setError(null);
 
     try {
-      const response = await importApi.fromText(textData, deckName, language, separator, cardType);
+      const format = columnFormat === 'auto' ? undefined : columnFormat;
+      const response = await importApi.fromText(textData, deckName, language, separator, cardType, format);
       if (response.success && response.deck) {
         navigate(`/decks/${response.deck.id}/edit`);
       }
     } catch (err: any) {
-      setError(err.response?.data?.detail || 'Failed to import text');
+      const detail = err.response?.data?.detail;
+      if (typeof detail === 'string') {
+        setError(detail);
+      } else if (Array.isArray(detail)) {
+        setError(detail.map((e: any) => e.msg || String(e)).join('; '));
+      } else {
+        setError('Failed to import text');
+      }
     } finally {
       setLoading(false);
     }
@@ -144,6 +175,23 @@ export default function Import() {
                   <option value="generic">Other</option>
                 </select>
               </div>
+            </div>
+
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Column Format
+              </label>
+              <select
+                value={columnFormat}
+                onChange={(e) => setColumnFormat(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+              >
+                {getColumnFormatOptions().map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label} - {opt.desc}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div
@@ -236,6 +284,23 @@ export default function Import() {
                   <option value="cloze">Cloze</option>
                 </select>
               </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Column Format
+              </label>
+              <select
+                value={columnFormat}
+                onChange={(e) => setColumnFormat(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+              >
+                {getColumnFormatOptions().map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label} - {opt.desc}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div>

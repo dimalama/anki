@@ -28,7 +28,14 @@ export default function DeckCreate() {
         navigate(`/decks/${response.deck.id}/edit`);
       }
     } catch (err: any) {
-      setError(err.response?.data?.detail || 'Failed to create deck');
+      const detail = err.response?.data?.detail;
+      if (typeof detail === 'string') {
+        setError(detail);
+      } else if (Array.isArray(detail)) {
+        setError(detail.map((e: any) => e.msg || String(e)).join('; '));
+      } else {
+        setError('Failed to create deck');
+      }
     } finally {
       setLoading(false);
     }

@@ -39,3 +39,11 @@ env/
 
 # Environment variables
 .env
+.env.local
+
+# Deployment-specific files (keep templates only)
+deployment/README.md
+deployment/QUICK-START.md
+deployment/DEPLOYMENT-CHECKLIST.md
+deployment/ACCESS-GUIDE.md
+deployment/SUMMARY.md

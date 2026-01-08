@@ -10,6 +10,7 @@ export default function DeckEdit() {
   const [deck, setDeck] = useState<Deck | null>(null);
   const [cards, setCards] = useState<Card[]>([]);
   const [loading, setLoading] = useState(true);
+  const [nextNewId, setNextNewId] = useState(-1);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -46,11 +47,12 @@ export default function DeckEdit() {
       : { Front: '', Back: '' };
 
     const newCard: Card = {
-      id: cards.length,
+      id: nextNewId,
       deck_id: deckId!,
       fields,
       tags: [],
     };
+    setNextNewId(nextNewId - 1);
     setCards([...cards, newCard]);
   };
 
@@ -62,14 +64,26 @@ export default function DeckEdit() {
 
   const handleSave = async () => {
     try {
-      // Create card data
-      const cardData: CardCreate[] = cards.map(card => ({
-        fields: card.fields,
-        tags: card.tags,
-      }));
+      // Separate existing cards (id >= 0) from new cards (id < 0)
+      const existingCards = cards.filter(card => card.id >= 0);
+      const newCards = cards.filter(card => card.id < 0);
 
-      // Save all cards
-      await cardsApi.createBatch(deckId!, cardData);
+      // Update existing cards
+      for (const card of existingCards) {
+        await cardsApi.update(deckId!, card.id, {
+          fields: card.fields,
+          tags: card.tags,
+        });
+      }
+
+      // Create only new cards
+      if (newCards.length > 0) {
+        const newCardData: CardCreate[] = newCards.map(card => ({
+          fields: card.fields,
+          tags: card.tags,
+        }));
+        await cardsApi.createBatch(deckId!, newCardData);
+      }
 
       alert('Deck saved successfully!');
       navigate('/');

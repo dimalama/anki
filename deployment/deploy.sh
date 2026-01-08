@@ -151,7 +151,7 @@ fi
 
 # Check nginx configuration
 print_status "Checking nginx configuration..."
-if grep -q "location /anki" /etc/nginx/sites-available/optitrade 2>/dev/null; then
+if grep -q "location /anki" /etc/nginx/sites-available/default 2>/dev/null || grep -q "location /anki" /etc/nginx/sites-enabled/* 2>/dev/null; then
     sudo nginx -t && {
         print_status "Reloading nginx..."
         sudo systemctl reload nginx
@@ -163,7 +163,7 @@ else
     print_warning "Nginx configuration for /anki not found"
     print_status "To set up nginx:"
     echo -e "${YELLOW}1. Add the location blocks from deployment/nginx-anki-location.conf${NC}"
-    echo -e "${YELLOW}2. to /etc/nginx/sites-available/optitrade${NC}"
+    echo -e "${YELLOW}2. to your nginx site configuration${NC}"
     echo -e "${YELLOW}3. sudo nginx -t${NC}"
     echo -e "${YELLOW}4. sudo systemctl reload nginx${NC}"
 fi
@@ -180,7 +180,7 @@ echo -e "  View logs:    ${YELLOW}sudo journalctl -u $SERVICE_NAME -f${NC}"
 echo -e "  Restart:      ${YELLOW}sudo systemctl restart $SERVICE_NAME${NC}"
 echo -e "  Stop:         ${YELLOW}sudo systemctl stop $SERVICE_NAME${NC}"
 echo -e "  Status:       ${YELLOW}sudo systemctl status $SERVICE_NAME${NC}"
-echo -e "  Nginx logs:   ${YELLOW}sudo tail -f /var/log/nginx/optitrade.access.log${NC}"
+echo -e "  Nginx logs:   ${YELLOW}sudo tail -f /var/log/nginx/access.log${NC}"
 echo -e "\n${GREEN}Access the application at:${NC}"
-echo -e "  ${YELLOW}http://192.168.0.174/anki${NC}"
+echo -e "  ${YELLOW}http://YOUR_SERVER_IP/anki${NC}"
 echo ""
